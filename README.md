@@ -1,10 +1,11 @@
 # Shells generator
 
-This is a simple cli tool to store commands in a sqlite database which is written in GO. 
-
-## A simple cli tool to store and retrieve data such as example commands for a user 
+A simple cli tool to generate reverse shell in various languages and environments written in GO.
 
 
+## Demo
+
+[Demo](https://secopsbear.com/assets/images/sb-shells-025a7c81680820f8f8d5d3cea89db1da.gif)
 
 ## How to build   
 
@@ -61,7 +62,7 @@ Flags:
 Use "sb-shells [command] --help" for more information about a command.   
 ```
 
-
+More information on demo and usage is available at [https:/secopsbear.com](https://secopsbear.com/tools/bear_tools/sb-shells)
 
 
 

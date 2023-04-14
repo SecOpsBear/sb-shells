@@ -5,7 +5,7 @@ A simple cli tool to generate reverse shell in various languages and environment
 
 ## Demo
 
-[Demo](https://secopsbear.com/assets/images/sb-shells-025a7c81680820f8f8d5d3cea89db1da.gif)
+![sb-shells demo](https://secopsbear.com/assets/images/sb-shells-025a7c81680820f8f8d5d3cea89db1da.gif)
 
 ## How to build   
 

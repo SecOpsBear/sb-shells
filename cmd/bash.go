@@ -1,7 +1,6 @@
 package cmd
 
 import (
-	// "cybo-shells/colors"
 	"fmt"
 
 	"github.com/secopsbear/sb-shells/colors"

